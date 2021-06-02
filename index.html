@@ -7,6 +7,9 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128593606-2"></script>
     <script>
+       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -17,10 +20,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
     <!-- estilos  -->
     <link href="./Union · Migrante_files/bootstrap.css" rel="stylesheet">
     <link href="./Union · Migrante_files/bootstrap-responsive.css" rel="stylesheet">
+    
+    
     <style>
 
     /* GLOBAL STYLES
@@ -293,6 +300,52 @@
           padding-right: 10px;
         }
       }
+
+      #mapa{    
+        height: 420px;
+    background-color: rgb(0, 60, 81);}
+
+    .seccion {
+  padding: 30px 0;
+}
+
+.seccion p {
+  font-size: 1.2em;
+  text-align: center;
+  color: #000;
+}
+
+.contenedor {
+  width: 98%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .centrar-columnas {
+    justify-content: center;
+  }
+  .columnas-4 {
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+  .columnas-6 {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  .columnas-8 {
+    flex: 0 0 calc(66.6% - 1rem);
+  }
+  .columnas-10 {
+    flex: 0 0 calc(83.3% - 1rem);
+  }
+  .columnas-12 {
+    flex: 0 0 100%;
+  }
+}
+
 	  /* Sticky footer styles
       -------------------------------------------------- */
     </style>
@@ -457,37 +510,64 @@
       <!-- /END THE FEATURETTES -->
       
     </div><!-- /.container -->
-<br><br><br>
-
-      <!-- FOOTER -->
-      <footer>
-        <div id="footer">
-      	<div class="container">
+    <div class="container marketing">
+      <h1 class="featurette-heading" style="color:black" align="center">
+        contactanos 
+      </h1>
+      
+      <div class="grid">
+        <div class="columnas-6 centrar-columnas">
+          <div id="mapa"></div>
+      </div>
+      <div class="columnas-6 centrar-columnas">
+        <div class="fb-page" data-href="https://www.facebook.com/campotrabajos" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/campotrabajos" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/campotrabajos">Trabajos de Campo para USA</a></blockquote></div>
+    </div>
+      </div>
+      
+    </div>
+    <section class="contenedor seccion">
+      <!-- <h2 class="fw-300 centrar-texto">Contáctanos</h2> -->
+      <p>Dirección: Nicolás Bravo 341, Centro, Cd. L. Cárdenas, Mich., MX.</p>
+      <p>Teléfonos: +52 (753) 537 3761, +52 (753) 139 7277 y +52 (753) 540 5810. </p>
+      <p>Correo: 
+        <a href="mailto:info@unionmigrante.com">info@unionmigrante.com</a><br>
+        <a href="mailto:uniondemigrantes@yahoo.com">uniondemigrantes@yahoo.com</a>
+      </p>
+      
+  </section>
+    <br><br><br>
+    
+    <!-- FOOTER -->
+    <footer>
+      <div id="footer">
+        <div class="container">
    <h4 style="color:white" align="center">
+    
+    <table  WIDTH="100%" BORDER="0" CELLSPACING="3" CELLPADDING="2" align="center">
+      <tr>
+        <td><strong><img src="Union · Migrante_files/tel.png"border="50" width="75" height="75"></strong> </td>
+        <td><strong><img src="Union · Migrante_files/email.png"border="50" width="75" height="75"></strong> </td>
+        <td><strong><img src="Union · Migrante_files/horario.png"border="50" width="75" height="75"></strong></td>
+        <!-- <td><strong> <img src="Union · Migrante_files/face.png"border="50" width="95" height="95"></strong></td> -->
+        
+      </tr>
+      
+      <tr>
+        <td>&nbsp&nbsp +52 (753) 537 3761  </td>
+        <td>&nbsp;&nbsp info@unionmigrante.com</td>
+        <td>&nbsp lunes a viernes </td>
+  <!-- <td> <a href="http://www.facebook.com/citaelyn">Elyn Consultoria Internacional</a>&nbsp  </td> -->
 
-   <table  WIDTH="100%" BORDER="0" CELLSPACING="3" CELLPADDING="2" align="center">
+
 <tr>
-  <td><strong><img src="Union · Migrante_files/tel.png"border="50" width="75" height="75"></strong> </td>
-  <td><strong><img src="Union · Migrante_files/email.png"border="50" width="75" height="75"></strong> </td>
-  <td><strong><img src="Union · Migrante_files/horario.png"border="50" width="75" height="75"></strong></td>
-  <td><strong> <img src="Union · Migrante_files/face.png"border="50" width="95" height="95"></strong></td>
-</tr>
-
-<tr>
-  <td>&nbsp&nbsp  (753) 537 3761  </td>
-  <td>&nbsp;&nbsp info@unionmigrante.com</td>
-  <td>&nbsp lunes a viernes </td>
-  <td> <a href="http://www.facebook.com/citaelyn">Elyn Consultoria Internacional</a>&nbsp  </td>
-
-
-<tr>
-  <td>&nbsp;&nbsp; (753) 139 7277  </td>
-  <td>&nbsp;&nbsp;&nbsp;&nbsp </td>
+  <td>&nbsp;&nbsp; +52 (753) 139 7277  </td>
+  <td>&nbsp;&nbsp uniondemigrantes@yahoo.com</td>
+  <!-- <td>&nbsp;&nbsp;&nbsp;&nbsp </td> -->
   <td>&nbsp 7:00 am - 8:00 pm</td>
 </tr>
 
 <tr>
-  <td>&nbsp;&nbsp  (753) 540 5810  </td>
+  <td>&nbsp;&nbsp +52 (753) 540 5810  </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp</td>
   <td>&nbsp; sabados</td>
 </tr>
@@ -502,7 +582,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp
 </table>
 
-   <br><br>
+   
+<br>
+   <br>
    <a style="color:white">  © 2021 All Rights Reserved</a>
 
    <br></h4>
@@ -530,6 +612,7 @@
     <script src="./Union · Migrante_files/bootstrap-carousel.js.descarga"></script>
     <script src="./Union · Migrante_files/bootstrap-typeahead.js.descarga"></script>
     <script>
+      
       !function ($) {
         $(function(){
           // carousel demo
@@ -541,3 +624,22 @@
   <div style="text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;"></div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Union · Migrante_files/translate_24dp.png" width="20" height="20" alt="Google Traductor de Google"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texto original</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Sugiere una traducción mejor</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
 
 <div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Widget de idiomas del Traductor" style="visibility: visible; box-sizing: content-box; width: 873px; height: 263px; display: none;" src="./Union · Migrante_files/saved_resource(1).html"></iframe><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Widget de idiomas del Traductor" style="visibility: visible; box-sizing: content-box; width: 236px; height: 69px; display: none;" src="./Union · Migrante_files/saved_resource(2).html"></iframe></body></html>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v10.0&appId=502654373424425&autoLogAppEvents=1" nonce="XKPYOAQ6"></script>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+   <script>
+  if (document.getElementById('mapa')) {
+
+var map = L.map('mapa').setView([17.960890, -102.195890], 17);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+L.marker([17.960890, -102.195890]).addTo(map).bindPopup('Union Migrante').openPopup();
+// .bindTooltip('GDLWebCamp 2018, Boletos ya disponibles')
+// .openTooltip();
+}
+   </script>
