@@ -1,0 +1,115 @@
+/*  Botón ir arriba / abajo */
+.irAbajo, .irArriba {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(36 36 32);
+    color: #fff;
+    position: fixed;
+    bottom: 31px;
+    right: 40px;
+    border: 0;
+    box-shadow: 0px 0px 10px 3px #6e6e6e;
+    z-index: 400;
+}
+
+.transform-r-180 {
+    transform: rotate(180deg);
+}
+
+.contenido-contabilidad {
+    font-size: 19px;
+}
+
+.menu-fijado {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+/* Estilos footer */
+
+footer a {
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+.tituloVacantes {
+    background-color: var(--color-principal)!important;
+    border-color: var(--color-principal)!important;
+}
+
+.contenedor-img-ingenieria-civil {
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.contenedor-img-ingenieria-civil img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.header-card {
+    text-align: center;
+    padding: 10px;
+    background-color: #335249;
+    color: #fff;
+}
+
+.tituloCV {
+    background-color: var(--color-principal);
+}
+
+.titulo-vacantes {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #b8b530;
+    padding-bottom: 10px;
+    color: #000;
+}
+
+.contenidoFooter .seccion {
+    background-color: var(--color-principal);
+}
+
+footer .titulo-principal .estilo-letra {
+    color: var(--estilo-letra);
+}
+
+footer iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.paginasWeb li {
+    color: var(--estilo-letra);
+}
+
+footer .horarios-atencion, footer .numeros-telefonicos li a {
+    color: var(--color-white)!important;
+}
+
+.paginasWeb li a {
+    color: #fff;
+    font-weight: 100!important;
+}
+
+.copyright  {
+    font-weight: normal!important;
+}
+
+/* Menú principal */
+
+nav.navegacion-principal li:hover, .item-activo {
+    background-color: var(--color-principal);
+    border-radius: 5px;
+}
+  
+.principal-activo-item * {
+    color: #fff;
+}
+
+.principal-activo-item .item-activo {
+    color: #fff!important;
+}

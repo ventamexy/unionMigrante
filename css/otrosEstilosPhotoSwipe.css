@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    font-size: initial!important;
+}
+
+.pswp-gallery__item {
+    margin: 0 4px 4px 0;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pswp-gallery__item img {
+    display: block;
+}
+
+.pswp-gallery {
+    padding: 0 50px 50px;
+    background: #eee;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pswp-gallery > div {
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 50%);
+    /* margin-left: 30px; */
+}
+
+.pswp__dynamic-caption {
+    color: #fff;
+    width: 100%;
+}
+
+.pswp__dynamic-caption a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- Otros estilos */
+#gallery img {
+    width: 100%;
+}
+
+.pswp__zoom-wrap {
+    width: 350px;
+    height: 300px;
+}
+
+img.pswp__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* .pswp__img {
+    width: auto!important;
+} */
+
+img {
+    min-width: initial!important;
+    max-width: initial!important;
+}
+
+.pswp__dynamic-caption {
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+}
+
+.pswp__dynamic-caption {
+    top: 0!important;
+    margin-top: 0px!important;
+}
+
+.pswp--ui-visible > .pswp__dynamic-caption {
+    display: none!important;
+}

@@ -1,0 +1,13 @@
+:root {
+    --color-principal: #39448c ;
+    --color-secundario: rgb(220,53,69); 
+    --color-tercero: #ffc527; 
+    --color-cuarto:#1f624f;
+    --color-green: #008000;
+    --estilo-letra:rgb(163 255 125);
+    --texto-color-footer:#fff;
+    --color-white:#fff;
+    --color-black:#000;
+    --color-menu:#1b1b1b;
+    --color-menu-titulo:#999999;
+}
