@@ -244,6 +244,10 @@ button.close {
     position: initial!important;
 }
 
+/* Width */
+.w-250px {
+    width: 250px;
+}
 
 /* Estilos página web */
 
