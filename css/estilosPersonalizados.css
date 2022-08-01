@@ -63,7 +63,7 @@ footer h3 {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #71e9c7;
+    color: var(--color-letra-verde);
     font-size: 20px;
 }
 
@@ -125,7 +125,7 @@ footer h3 {
 
 .navbar-brand {
     font-size: 25px;
-    color: var(--color-menu-titulo)!important;
+    color: var(--color-letra-verde)!important;
     border-bottom: 3px solid #fff;
 }
 
