@@ -213,7 +213,60 @@
         <div class="row">
             <h1 class="text-center text-italic">Formulario de contacto</h1>
             <div class="row">
-                
+                <form class="frmPrecalificacion">
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-group col-12 col-md-6 col-lg-3">
+                                <label for="nombre">Nombre:</label>
+                                <input 
+                                type="text" 
+                                class="form-control"
+                                name="nombre">
+                                <span class="campoObligatorio">Campo obligatorio</span>
+                            </div>
+                            <div class="form-group col-12 col-md-6 col-lg-3">
+                                <label for="nombre">Apellido paterno:</label>
+                                <input 
+                                type="text" 
+                                class="form-control"
+                                name="apellidoPaterno">
+                                <span class="campoObligatorio">Campo obligatorio</span>
+                            </div>
+                            <div class="form-group col-12 col-md-6 col-lg-3">
+                                <label for="nombre">Apellido materno:</label>
+                                <input 
+                                type="text" 
+                                class="form-control"
+                                name="apellidoMaterno">
+                            </div>
+                            <div class="form-group col-12 col-md-6 col-lg-3">
+                                <label for="nombre">Email:</label>
+                                <input 
+                                type="email" 
+                                class="form-control"
+                                name="email">
+                                <span class="campoObligatorio">Campo obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label for="nombre">Mensaje:</label>
+                                <textarea 
+                                class="form-control"
+                                rows="8"
+                                name="mensaje"></textarea>
+                                <span class="campoObligatorio">Campo obligatorio</span>
+                            </div>
+                            <div class="d-flex justify-content-center my-3">
+                                <button 
+                                class="btn btn-success btnEnviarPrecalificacion" 
+                                type="button">
+                                    Enviar solicitud
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
