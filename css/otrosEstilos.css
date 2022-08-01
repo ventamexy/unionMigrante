@@ -30,13 +30,13 @@
 /* Estilos footer */
 
 footer a {
-    color: var(--color-principal);
+    color: var(--color-menu);
     font-weight: bold;
 }
 
 .tituloVacantes {
-    background-color: var(--color-principal)!important;
-    border-color: var(--color-principal)!important;
+    background-color: var(--color-menu)!important;
+    border-color: var(--color-menu)!important;
 }
 
 .contenedor-img-ingenieria-civil {
@@ -58,7 +58,7 @@ footer a {
 }
 
 .tituloCV {
-    background-color: var(--color-principal);
+    background-color: var(--color-menu);
 }
 
 .titulo-vacantes {
@@ -70,11 +70,11 @@ footer a {
 }
 
 .contenidoFooter .seccion {
-    background-color: var(--color-principal);
+    background-color: var(--color-menu);
 }
 
 footer .titulo-principal .estilo-letra {
-    color: var(--estilo-letra);
+    color: var(--color-letra-verde);
 }
 
 footer iframe {
@@ -83,7 +83,7 @@ footer iframe {
 }
 
 .paginasWeb li {
-    color: var(--estilo-letra);
+    color: var(--color-letra-verde);
 }
 
 footer .horarios-atencion, footer .numeros-telefonicos li a {
@@ -102,7 +102,7 @@ footer .horarios-atencion, footer .numeros-telefonicos li a {
 /* Menú principal */
 
 nav.navegacion-principal li:hover, .item-activo {
-    background-color: var(--color-principal);
+    background-color: var(--color-menu);
     border-radius: 5px;
 }
   

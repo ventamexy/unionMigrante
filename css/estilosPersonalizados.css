@@ -24,6 +24,10 @@ li {
     border-bottom: 12px solid var(--color-cuarto);
 }
 
+.border-bottom-1px-nav {
+    border-bottom: 1px solid var(color-letra-verde);
+}
+
 /* Align */
 .text-justify {
     text-align: justify !important;
@@ -135,7 +139,7 @@ img {
 }
 
 .carousel-inner img {
-    height: 450px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -238,4 +242,11 @@ button.close {
 
 .p-fixed-initial {
     position: initial!important;
+}
+
+
+/* Estilos página web */
+
+.contenido-fondo {
+    background-image: url("../imagenes/fondo-contenido.png");
 }

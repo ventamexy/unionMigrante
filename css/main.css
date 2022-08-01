@@ -1024,7 +1024,7 @@ form.registro label {
 h4 {
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 2px solid #b8b530;
+  border-bottom: 2px solid var(--color-letra-verde);
   padding-bottom: 10px;
   font-size: 1.2em;
 }
