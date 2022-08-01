@@ -28,6 +28,11 @@ li {
     border-bottom: 1px solid var(color-letra-verde);
 }
 
+/* Text */
+.text-italic {
+    font-style: italic;
+}
+
 /* Align */
 .text-justify {
     text-align: justify !important;
@@ -253,4 +258,20 @@ button.close {
 
 .contenido-fondo {
     background-image: url("../imagenes/fondo-contenido.png");
+}
+
+.img-fondo-servicios {
+    background-image: url(../img/nosotros/fondo10.png);
+}
+
+.table-hover tr {
+    cursor: pointer;
+}
+
+.table-hover tr:hover {
+    background-color: var(--table-color-hover);
+}
+
+.table-hover tr:hover td {
+    color: #fff!important;
 }

@@ -1223,7 +1223,7 @@ section.admin nav a:hover,
 table td {
   border: 1px solid #999999;
   border-collapse: collapse;
-  padding: 20px;
+  padding: 10px;
 }
 
 table.registrados thead {
