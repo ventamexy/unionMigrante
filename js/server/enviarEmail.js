@@ -4,6 +4,8 @@ window.addEventListener("load", function() {
 
         $(".cargaSpinner").removeClass("d-none");
         $(".btnEnviarPrecalificacion").attr({disabled:true});
+        let imgNotificacion = "img/iconos-notificaciones/success.png";
+        let typeButton = "btn btn-danger";
 
         try {
             
@@ -60,17 +62,18 @@ window.addEventListener("load", function() {
                     
                     try {
                         
-                        var typeBtn = "btn btn-danger";
-
-                        if ( data["validaciones"] || !data["estadoEnvioCorreo"] ) {
-                            throw data["mensaje"];
+                        if ( data["validaciones"] ) {
+                            imgNotificacion = "img/iconos-notificaciones/warning.png";
                         }
 
                         if ( data["estadoEnvioCorreo"] == true ) {
-                            typeBtn = "btn btn-success";
+                            typeButton = "btn btn-success";
                             $("input, textarea").val("");
-                            throw data["mensaje"];
+                        } else {
+                            imgNotificacion = "img/iconos-notificaciones/error.png";
                         }
+
+                        throw data["mensaje"];
 
                     } catch (error) {
                         
@@ -79,9 +82,12 @@ window.addEventListener("load", function() {
                             className: 'd-flex align-items-center'
                         });
                         
-                        $(".bootbox-accept").addClass(typeBtn);
+                        $(".bootbox-accept").addClass(typeButton);
                         $(".btnEnviarPrecalificacion").attr({disabled:false});
                         $(".cargaSpinner").addClass("d-none");
+
+                        addImageNotificacion(imgNotificacion);
+
                     }
 
                 }
@@ -90,17 +96,30 @@ window.addEventListener("load", function() {
 
         } catch (error) {
 
+            imgNotificacion = "img/iconos-notificaciones/warning.png";
+
             bootbox.alert({
                 message: error,
                 className: 'd-flex align-items-center'
             });
 
-            $(".bootbox-accept").addClass("btn btn-danger");
+            $(".bootbox-accept").addClass("btn "+typeButton);
             $(".btnEnviarPrecalificacion").attr({disabled:false});
             $(".cargaSpinner").addClass("d-none");
+
+            addImageNotificacion(imgNotificacion);
 
         }
 
     });
+
+    function addImageNotificacion( imgNotificacion = "" ) {
+
+        let contenedorImagenNotificacion = $("<div>").attr({class:"contenedor-img-notificacion"});
+        let imagenNotificacion = $("<img>").attr({class:"icono-notificacion", src:imgNotificacion});
+        contenedorImagenNotificacion.append(imagenNotificacion);
+        contenedorImagenNotificacion.insertBefore(".bootbox-accept.btn-danger");
+
+    }
 
 });

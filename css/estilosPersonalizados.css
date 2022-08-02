@@ -196,9 +196,10 @@ iframe {
 /* Validaciones */
 
 .campoObligatorio {
-    font-size: 15px;
-    color: #f53a3a;
+    font-size: 12px;
+    color: #ff0000;
     font-style: italic;
+    font-weight: bold;
 }
 
 .campoValidacion {
@@ -238,6 +239,14 @@ button.close {
 
 .bootbox-body {
     text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .title-other {
@@ -247,6 +256,17 @@ button.close {
 
 .p-fixed-initial {
     position: initial!important;
+}
+
+.contenedor-img-notificacion {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icono-notificacion {
+    width: 80px;
+    height: 80px;
 }
 
 /* Width */
