@@ -1,0 +1,66 @@
+label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.btnEnviarPrecalificacion {
+    width: 150px;
+    padding: 10px;
+    background-color: var(--color-principal)!important;
+}
+
+.btnEnviarPrecalificacion:not([disabled]):not(.disabled):active {
+    background-color: var(--color-principal)!important;
+}
+
+/* Validaciones */
+
+.campoObligatorio {
+    font-size: 12px;
+    font-weight: bold;
+    color: #f53a3a;
+    font-style: italic;
+}
+
+.campoValidacion {
+    background-color:#ff9191;
+}
+
+/* Bootbox */
+
+.bootbox .modal-dialog {
+    width: 100%;
+}
+
+.modal-body > .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 0.75rem;
+    z-index: 1;
+}
+
+.bootbox-body {
+    padding: 1rem!important;
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.close {
+    float: right;
+    font-size: 1.40625rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #000;
+    text-shadow: none;
+    opacity: .5;
+}
+
+.bootbox-body {
+    text-align: center;
+}
