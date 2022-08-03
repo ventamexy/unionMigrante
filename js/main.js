@@ -76,22 +76,3 @@ $(document).on("click", ".irArriba", function(){
 });
 
 $(".anio-actual").text(new Date().getFullYear());
-
-
-// --- CURL
-$(document).on("click", ".irAbajo", function() {
-
-    let urlLocal = "http://local.empleosmexy.com/server/controllers/cEnviarEmail.php";
-    let urlServer = "https://empleosmexy.com/server/controllers/cEnviarEmail.php";
-
-    $.ajax({
-        url:urlServer,
-        method:"POST",
-        data:{tipoPeticion:"enviarEmail"},
-        dataType:"JSON",
-        success:function(data){
-            console.log(data);
-        }
-    });
-
-}); 
