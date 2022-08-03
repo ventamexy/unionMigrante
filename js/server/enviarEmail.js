@@ -50,13 +50,15 @@ window.addEventListener("load", function() {
 
             let frmPreCalificacion = $(".frmPrecalificacion").serialize();
 
-            let urlLocal = "http://local.empleosmexy.com/server/controllers/cEnviarEmail.php";
             let urlServidor = "https://empleosmexy.com/server/controllers/cEnviarEmail.php";
+            if ( window.location.host === "local.unionmigrante.com" ) {
+                urlServidor = "http://local.empleosmexy.com/server/controllers/cEnviarEmail.php";
+            }
 
             $.ajax({
 
                 data:frmPreCalificacion+"&tipoPeticion=enviarEmail",
-                url:urlLocal,
+                url:urlServidor,
                 method:"POST",
                 dataType:"JSON",
                 success:function(data) {
@@ -125,7 +127,6 @@ window.addEventListener("load", function() {
             botonCierre = ".bootbox-accept.btn-success";
         }
 
-        console.log(botonCierre, estadoEnvio);
         contenedorImagenNotificacion.insertBefore(botonCierre);
 
     }
