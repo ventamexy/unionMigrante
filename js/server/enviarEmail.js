@@ -6,6 +6,7 @@ window.addEventListener("load", function() {
         $(".btnEnviarPrecalificacion").attr({disabled:true});
         let imgNotificacion = "img/iconos-notificaciones/success.png";
         let typeButton = "btn btn-danger";
+        let estadoEnvio = false;
 
         try {
             
@@ -55,7 +56,7 @@ window.addEventListener("load", function() {
             $.ajax({
 
                 data:frmPreCalificacion+"&tipoPeticion=enviarEmail",
-                url:urlServidor,
+                url:urlLocal,
                 method:"POST",
                 dataType:"JSON",
                 success:function(data) {
@@ -69,6 +70,7 @@ window.addEventListener("load", function() {
                         if ( data["estadoEnvioCorreo"] == true ) {
                             typeButton = "btn btn-success";
                             $("input, textarea").val("");
+                            estadoEnvio = true;
                         } else {
                             imgNotificacion = "img/iconos-notificaciones/error.png";
                         }
@@ -86,7 +88,7 @@ window.addEventListener("load", function() {
                         $(".btnEnviarPrecalificacion").attr({disabled:false});
                         $(".cargaSpinner").addClass("d-none");
 
-                        addImageNotificacion(imgNotificacion);
+                        addImageNotificacion(imgNotificacion, estadoEnvio);
 
                     }
 
@@ -107,18 +109,24 @@ window.addEventListener("load", function() {
             $(".btnEnviarPrecalificacion").attr({disabled:false});
             $(".cargaSpinner").addClass("d-none");
 
-            addImageNotificacion(imgNotificacion);
+            addImageNotificacion(imgNotificacion, estadoEnvio);
 
         }
 
     });
 
-    function addImageNotificacion( imgNotificacion = "" ) {
+    function addImageNotificacion( imgNotificacion = "", estadoEnvio) {
 
         let contenedorImagenNotificacion = $("<div>").attr({class:"contenedor-img-notificacion"});
         let imagenNotificacion = $("<img>").attr({class:"icono-notificacion", src:imgNotificacion});
         contenedorImagenNotificacion.append(imagenNotificacion);
-        contenedorImagenNotificacion.insertBefore(".bootbox-accept.btn-danger");
+        let botonCierre = ".bootbox-accept.btn-danger";
+        if ( estadoEnvio ) {
+            botonCierre = ".bootbox-accept.btn-success";
+        }
+
+        console.log(botonCierre, estadoEnvio);
+        contenedorImagenNotificacion.insertBefore(botonCierre);
 
     }
 
