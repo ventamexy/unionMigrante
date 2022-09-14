@@ -48,6 +48,11 @@ window.addEventListener("load", function() {
             } mensaje.removeClass("campoValidacion");
 
 
+            // --- Validación de la contestación del reCaptcha.
+            if ( grecaptcha.getResponse().length == 0 ) {
+                throw "Necesita solucionar el captcha para seguir con el proceso del envío del email.";
+            }
+
             let frmPreCalificacion = $(".frmPrecalificacion").serialize();
 
             let urlServidor = "https://empleosmexy.com/server/controllers/cEnviarEmail.php";
@@ -91,6 +96,7 @@ window.addEventListener("load", function() {
                         $(".cargaSpinner").addClass("d-none");
 
                         addImageNotificacion(imgNotificacion, estadoEnvio);
+                        grecaptcha.reset();
 
                     }
 
@@ -112,6 +118,7 @@ window.addEventListener("load", function() {
             $(".cargaSpinner").addClass("d-none");
 
             addImageNotificacion(imgNotificacion, estadoEnvio);
+            grecaptcha.reset();
 
         }
 

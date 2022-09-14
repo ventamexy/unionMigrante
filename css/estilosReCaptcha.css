@@ -1,0 +1,26 @@
+.g-recaptcha {
+    overflow: hidden;
+}
+
+.reload-captcha {
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-principal);
+    border-radius: 50%;
+    color: #fff;
+    border-color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-boton {
+    position: absolute!important;
+    left: 36px;
+    top: 58px;
+}
+
+.recaptcha-invalido {
+    background: #ff6262;
+    padding: 5px;
+}
