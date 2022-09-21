@@ -5,3 +5,15 @@ window.addEventListener("load", function() {
     });
 
 });
+
+// --- Carga del recaptcha.
+function CaptchaCallback() {
+
+    grecaptcha.render("g-recaptcha", {
+        sitekey: '6LelCfshAAAAAD64THju_2gNagBLsfiFv0aLfzG_',
+        callback: function () {
+            console.log('recaptcha callback');
+        }
+    });
+
+};

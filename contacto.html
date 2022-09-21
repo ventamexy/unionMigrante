@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/estilosFormularioContacto.css">
     <link rel="stylesheet" href="css/spinnerCarga.css">
     <link rel="stylesheet" href="css/estilosReCaptcha.css">
-    <script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit'></script>
 </head>
 <body class="img-fondo-servicios">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navPrincipal border-bottom-1px-nav">
@@ -253,7 +252,7 @@
                                 <span class="campoObligatorio">Campo obligatorio</span>
                             </div>
                             <div class="row d-flex align-items-center position-relative">
-                                <div class="g-recaptcha"></div>
+                                <div class="g-recaptcha" id="g-recaptcha"></div>
                                 <div class="col-1 position-absolute contenedor-boton">
                                     <button class="reload-captcha" type="button">
                                         <i class="fa fa-refresh"></i>
@@ -718,7 +717,8 @@
     <script src="assets/bootstrap/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="css/bootbox/dist/bootbox.min.js"></script>
     <div id="fb-root"></div>
-    <script src="js/funcionesGenerales.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit'></script>
+    <script defer src="js/funcionesGenerales.js"></script>
     <script type="module" src="/js/server/enviarEmail.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeSzprwFmUOSsAIf36sT9hONLvf3ReD_4&callback=initMap"
@@ -726,10 +726,5 @@
     <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId=502654373424425&autoLogAppEvents=1"
     nonce="I0coc6CJ"></script>
-    <script defer>
-        var CaptchaCallback = function(){
-            grecaptcha.render('.g-recaptcha', {'sitekey' : '6LelCfshAAAAAD64THju_2gNagBLsfiFv0aLfzG_'});
-        };
-    </script>
 </body>
 </html>
