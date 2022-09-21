@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/estilosFormularioContacto.css">
     <link rel="stylesheet" href="css/spinnerCarga.css">
     <link rel="stylesheet" href="css/estilosReCaptcha.css">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit'></script>
 </head>
 <body class="img-fondo-servicios">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navPrincipal border-bottom-1px-nav">
@@ -253,7 +253,7 @@
                                 <span class="campoObligatorio">Campo obligatorio</span>
                             </div>
                             <div class="row d-flex align-items-center position-relative">
-                                <div class="g-recaptcha" data-sitekey="6LelCfshAAAAAD64THju_2gNagBLsfiFv0aLfzG_"></div>
+                                <div class="g-recaptcha"></div>
                                 <div class="col-1 position-absolute contenedor-boton">
                                     <button class="reload-captcha" type="button">
                                         <i class="fa fa-refresh"></i>
@@ -726,5 +726,10 @@
     <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId=502654373424425&autoLogAppEvents=1"
     nonce="I0coc6CJ"></script>
+    <script defer>
+        let CaptchaCallback = function(){
+            grecaptcha.render('.g-recaptcha', {'sitekey' : '6LelCfshAAAAAD64THju_2gNagBLsfiFv0aLfzG_'});
+        };
+    </script>
 </body>
 </html>
